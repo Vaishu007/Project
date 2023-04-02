@@ -125,7 +125,7 @@ Map arr= {
                              Navigator.push(context, MaterialPageRoute(builder: (context) => DeathList(),));
                              break;
                            case 'Bio-data':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => AddBioData(),));
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => Bio(),));
                              break;
                            case 'Help center':
                              Navigator.push(context, MaterialPageRoute(builder: (context) => HelpCenter(),));

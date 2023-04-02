@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class BioController extends GetxController {
-  late String selectedGender;
+ late var selectMStatus="".obs;
   late var select = "".obs;
 
   void onClickRadioButton(value) {
@@ -9,4 +9,9 @@ class BioController extends GetxController {
     select.value = value;
     update();
   }
+ void onClickMarriedRadioButton(value) {
+   print(value);
+   selectMStatus.value = value;
+   update();
+ }
 }
