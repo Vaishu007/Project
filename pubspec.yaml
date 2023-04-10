@@ -41,6 +41,9 @@ dependencies:
   flutter_bloc: ^8.1.2
   email_validator: ^2.1.17
   get: ^4.6.5
+  sqflite: any
+  path_provider: any
+
 
 dev_dependencies:
   flutter_test:

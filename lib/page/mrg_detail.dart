@@ -52,7 +52,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 60, 0),
+                        padding: EdgeInsets.fromLTRB(0, 0, 60, 0),
                         child: Text(
                           'Name',
                           style:TextStyle(
@@ -62,7 +62,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                        padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                         child: IconButton(
                           // borderColor: Colors.transparent,
                           // borderRadius: 30,
@@ -92,13 +92,13 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                         child: Image.network(
                           'https://picsum.photos/seed/961/600',
                           width: 60,
@@ -107,7 +107,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                         child: Image.network(
                           'https://picsum.photos/seed/835/600',
                           width: 60,
@@ -116,7 +116,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                         child: Image.network(
                           'https://picsum.photos/seed/48/600',
                           width: 60,
@@ -136,7 +136,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'અનુક્રમણિકા નંબર :',
                               style: TextStyle(
@@ -147,7 +147,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -164,7 +164,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'મૂળ વતન:',
                               style: TextStyle(
@@ -175,7 +175,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -192,7 +192,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'મોસાળ:',
                               style: TextStyle(
@@ -203,7 +203,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -220,7 +220,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'પિતા  નુ નામ:',
                               style: TextStyle(
@@ -231,7 +231,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -248,7 +248,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'માતાનું નામ :',
                               style: TextStyle(
@@ -259,7 +259,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -276,7 +276,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'પિતાનું કામ:',
                               style: TextStyle(
@@ -287,7 +287,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -304,7 +304,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'પિતાની આવક: ',
                               style: TextStyle(
@@ -315,7 +315,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -332,7 +332,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'ભાઈ ની સંખ્યા: ',
                               style: TextStyle(
@@ -343,7 +343,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -360,7 +360,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'બહેન ની સંખ્યા: ',
                               style: TextStyle(
@@ -371,7 +371,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -388,7 +388,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'સાટાપેટે: ',
                               style: TextStyle(
@@ -399,7 +399,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -416,7 +416,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'શારીરીક તકલીફ: ',
                               style: TextStyle(
@@ -427,7 +427,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -444,7 +444,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'વિદેશ વસતા ભારતીય: ',
                               style: TextStyle(
@@ -455,7 +455,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -472,7 +472,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'હાલ નુ સરનામું: ',
                               style: TextStyle(
@@ -483,7 +483,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -500,7 +500,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'જન્મ સ્થળ: ',
                               style: TextStyle(
@@ -511,7 +511,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -528,7 +528,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'જન્મ સમય: ',
                               style: TextStyle(
@@ -539,7 +539,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -556,7 +556,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'ખોરાક નો પ્રકાર: ',
                               style: TextStyle(
@@ -567,7 +567,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -584,7 +584,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'Education: ',
                               style: TextStyle(
@@ -595,7 +595,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -612,7 +612,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'Occupation: ',
                               style: TextStyle(
@@ -623,7 +623,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -640,7 +640,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               'Income per annum: ',
                               style: TextStyle(
@@ -651,7 +651,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                            padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -673,7 +673,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             children: [
                               Padding(
                                 padding:
-                                EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                EdgeInsets.fromLTRB(8, 8, 8, 8),
                                 child: Text(
                                   'Height: ',
                                   style: TextStyle(
@@ -685,7 +685,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                               ),
                               Padding(
                                 padding:
-                                EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                EdgeInsets.fromLTRB(8, 8, 8, 8),
                                 child: Text(
                                   '1',
                                   style: TextStyle(
@@ -703,7 +703,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                             children: [
                               Padding(
                                 padding:
-                                EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                EdgeInsets.fromLTRB(8, 8, 8, 8),
                                 child: Text(
                                   'Weight: ',
                                   style: TextStyle(
@@ -715,7 +715,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                               ),
                               Padding(
                                 padding:
-                                EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                EdgeInsets.fromLTRB(8, 8, 8, 8),
                                 child: Text(
                                   '1',
                                   style: TextStyle(
@@ -734,7 +734,7 @@ class _Mrg_DetailState extends State<Mrg_Detail> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                   child: ElevatedButton(
                     onPressed: () {
                       print('Button pressed ...');

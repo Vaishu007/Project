@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:smit_project/page/login.dart';
+import 'package:smit_project/page/Login/login.dart';
 
-import 'bloc/loginBloc/login_bloc.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -20,8 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: BlocProvider(create: (BuildContext context) => loginBLoc() ,
-          child: const LoginPage()),
+      home: const LoginPage()
     );
   }
 }
