@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smit_project/db_helper/dbHelper.dart';
+import 'package:smit_project/model/user_model.dart';
 import 'package:smit_project/page/Login/login_controller.dart';
 import 'package:smit_project/page/registration/registration.dart';
 
@@ -153,18 +155,11 @@ class _LoginPageState extends State<LoginPage> {
                                         loginController.password.value)
                                     .then((value) {
                                   if (value != null) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        const SnackBar(
-                                            content:
-                                                Text("Login Successfull"),
-                                          backgroundColor: Colors.green,
-                                        ));
+                                    Get.snackbar("Login", "Login SuccessFull",snackPosition: SnackPosition.BOTTOM,);
+                                    saveData(value);
                                     Get.offAll(() => BottomNavPage());
                                   } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        const SnackBar(
-                                            content: Text(
-                                                "Please Check Username and Password")));
+                                    Get.snackbar("Login", "Please Check Username and Password",snackPosition: SnackPosition.BOTTOM,);
                                   }
                                 }).onError((error, stackTrace) {
                                   print(error.toString());
@@ -217,5 +212,18 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  Future<void> saveData(User value) async {
+    final SharedPreferences share = await SharedPreferences.getInstance();
+    share.setString("name", value.name!);
+    share.setString("gender", value.gender!);
+    share.setString("phone", value.phone!);
+    share.setString("pass", value.password!);
+    share.setString("email", value.email!);
+    share.setString("address", value.address!);
+    share.setString("user_id", value.id!.toString());
+
+    share.setBool("is_log", true);
   }
 }

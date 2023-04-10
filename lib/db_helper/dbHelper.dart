@@ -48,10 +48,26 @@ class DatabaseHelper {
     return await db!.insert(User.tblUser, user.toMap());
   }
 
+  Future<int> updateUser(User user) async {
+    Database? db = await database;
+    return await db!.update(User.tblUser, user.toMap(),
+        where: "${User.colID}=?", whereArgs: [user.id]);
+  }
+
   Future<User?> loginUser(String phone, String password) async {
     Database? db = await database;
     var res = await db!.rawQuery(
         "SELECT * FROM ${User.tblUser} WHERE ${User.colPhone} = $phone and ${User.colPassword} = $password");
+    if (res.isNotEmpty) {
+      return User.fromMap(res.first);
+    }
+    return null;
+  }
+
+  Future<User?> getUser(int id) async {
+    Database? db = await database;
+    var res = await db!.rawQuery(
+        "SELECT * FROM ${User.tblUser} WHERE ${User.colID} = $id");
     if (res.isNotEmpty) {
       return User.fromMap(res.first);
     }
