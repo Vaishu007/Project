@@ -33,7 +33,7 @@ class _BottomNavState extends State<BottomNavPage> {
         currentIndex: current,
         elevation: 30,
         onTap: (index)=>setState(() => current=index),
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.notifications),
               label: 'Notification'),

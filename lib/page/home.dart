@@ -1,6 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smit_project/gridWidget/gallery.dart';
+import 'package:smit_project/page/Login/login.dart';
+import 'package:smit_project/page/profile/profile_page.dart';
 
 
 import '../gridWidget/biodata/Biodata_add.dart';
@@ -88,7 +92,40 @@ Map arr= {
     return Scaffold(
         appBar: AppBar(
           title: Text('Home'),
+          // in action widget we have PopupMenuButton
+          actions: [
+            PopupMenuButton<int>(
+              itemBuilder: (context) => [
+                // PopupMenuItem 1
+                PopupMenuItem(
+                  value: 1,
+                  // row with 2 children
+                  child: Text("Profile"),
+                ),
+                // PopupMenuItem 2
+                PopupMenuItem(
+                  value: 2,
+                  // row with two children
+                  child: Text("Log Out"),
+                ),
+              ],
+              offset: Offset(0, 50),
+              elevation: 2,
+              // on selected we show the dialog box
+              onSelected: (value) {
+                // if value 1 show dialog
+                if (value == 1) {
+                  Get.to(()=>ProfilePage());
+                  // if value 2 show dialog
+                } else if (value == 2) {
+                  logOut();
+                }
+              },
+            ),
+          ],
         ),
+
+
         body: SafeArea(
           top: true,
           child: Container(
@@ -161,5 +198,11 @@ Map arr= {
             ],
           )),
         ));
+  }
+
+  void logOut() async{
+    final SharedPreferences shared = await SharedPreferences.getInstance();
+    shared.setBool("is_log", false);
+    Get.offAll(()=>LoginPage());
   }
 }

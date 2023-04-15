@@ -31,7 +31,7 @@ class _Death_detailsState extends State<Death_details> {
             mainAxisSize: MainAxisSize.max,
             children: [
               const Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
                 child: Text(
                   'Shree kantha Jilla Modi Samaj ',
                   textAlign: TextAlign.center,
@@ -47,7 +47,7 @@ class _Death_detailsState extends State<Death_details> {
                 height: 400,
                 decoration: const BoxDecoration(),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     elevation: 10,
@@ -58,7 +58,7 @@ class _Death_detailsState extends State<Death_details> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         const Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                          padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
                           child: Text(
                             'Ahmedabad Vibhag',
                             style:
@@ -70,7 +70,7 @@ class _Death_detailsState extends State<Death_details> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.network(
@@ -82,7 +82,7 @@ class _Death_detailsState extends State<Death_details> {
                           ),
                         ),
                         const Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                          padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
                           child: Text(
                             'Name',
                             style:
@@ -100,7 +100,7 @@ class _Death_detailsState extends State<Death_details> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsets.fromLTRB(
                                       4, 4, 4, 4),
                                   child: Text(
                                     'Msg',
@@ -116,7 +116,7 @@ class _Death_detailsState extends State<Death_details> {
                                   MainAxisAlignment.spaceBetween,
                                   children: const [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsets.fromLTRB(
                                           4, 4, 4, 4),
                                       child: Text(
                                         'Son Name ',
@@ -141,7 +141,7 @@ class _Death_detailsState extends State<Death_details> {
                                   MainAxisAlignment.spaceBetween,
                                   children: const [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsets.fromLTRB(
                                           4, 4, 4, 4),
                                       child: Text(
                                         'Son Name ',
@@ -161,7 +161,7 @@ class _Death_detailsState extends State<Death_details> {
                                   ],
                                 ),
                                 const Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsets.fromLTRB(
                                       4, 4, 4, 4),
                                   child: Text(
                                     'Address',
