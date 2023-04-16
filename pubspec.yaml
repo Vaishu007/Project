@@ -44,6 +44,7 @@ dependencies:
   sqflite: any
   path_provider: any
   shared_preferences: ^2.0.20
+  image_picker: ^0.8.7+3
 
 
 

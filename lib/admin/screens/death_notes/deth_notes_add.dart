@@ -1,32 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smit_project/admin/help_center.dart';
-import 'package:smit_project/db_helper/dbHelper.dart';
-import 'package:smit_project/gridWidget/help_center/help_center_controller.dart';
+import 'package:smit_project/admin/screens/death_notes/death_details.dart';
+import 'package:smit_project/gridWidget/death_details/death_details_controller.dart';
 
-
-class HelpCenterAddPage extends StatefulWidget {
-  const HelpCenterAddPage({Key? key}) : super(key: key);
+class AdminDeathAdd extends StatefulWidget {
+  const AdminDeathAdd({Key? key}) : super(key: key);
 
   @override
-  State<HelpCenterAddPage> createState() => _HelpCenterAddPageState();
+  State<AdminDeathAdd> createState() => _AdminDeathAddState();
 }
 
-class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
-
+class _AdminDeathAddState extends State<AdminDeathAdd> {
+  final DeathDetailController deathDetailController = Get.put(DeathDetailController());
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final formKey = GlobalKey<FormState>();
-  final HelpCenterController helpCenterController = Get.put(HelpCenterController());
-
-  @override
-  void initState() {
-    super.initState();
-    helpCenterController.dbHelper = DatabaseHelper.instance;
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text("Add"),),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -53,7 +45,7 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                   SizedBox(
                     height: 50,
                     child: TextFormField(
-                      controller: helpCenterController.nameCtrl,
+                      controller: deathDetailController.nameCtrl,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -65,10 +57,10 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                         labelText: "Name",
                       ),
                       onSaved: (value) {
-                        helpCenterController.helpCenter.name = value;
+                        deathDetailController.helpCenter.name = value;
                       },
                       validator: (value) {
-                        return helpCenterController.validateName(value!);
+                        return deathDetailController.validateName(value!);
                       },
                     ),
                   ),
@@ -79,7 +71,7 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                     height: 50,
                     child: TextFormField(
                       maxLength: 10,
-                      controller: helpCenterController.phoneCtrl,
+                      controller: deathDetailController.phoneCtrl,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         counterText: '',
@@ -93,10 +85,10 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                         labelText: "Mobile No",
                       ),
                       onSaved: (value) {
-                        helpCenterController.helpCenter.phone = value;
+                        deathDetailController.helpCenter.phone = value;
                       },
                       validator: (value) {
-                        return helpCenterController.validatePhone(value!);
+                        return deathDetailController.validatePhone(value!);
                       },
                     ),
                   ),
@@ -106,7 +98,7 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                   SizedBox(
                     height: 50,
                     child: TextFormField(
-                      controller: helpCenterController.designationCtrl,
+                      controller: deathDetailController.designationCtrl,
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -119,10 +111,10 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                         labelText: "Designation",
                       ),
                       onSaved: (value) {
-                        helpCenterController.helpCenter.designation = value;
+                        deathDetailController.helpCenter.designation = value;
                       },
                       validator: (value) {
-                        return helpCenterController.validateDesignation(value!);
+                        return deathDetailController.validateDesignation(value!);
                       },
                     ),
                   ),
@@ -133,7 +125,7 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                     height: 50,
                     child: TextFormField(
                       maxLength: 8,
-                      controller: helpCenterController.cityCtrl,
+                      controller: deathDetailController.cityCtrl,
                       keyboardType: TextInputType.name,
 
                       decoration: InputDecoration(
@@ -148,10 +140,10 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                         labelText: "City",
                       ),
                       onSaved: (value) {
-                        helpCenterController.helpCenter.city = value;
+                        deathDetailController.helpCenter.city = value;
                       },
                       validator: (value) {
-                        return helpCenterController.validateCity(value!);
+                        return deathDetailController.validateCity(value!);
                       },
                     ),
                   ),
@@ -163,7 +155,7 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                     child: TextFormField(
                       textAlignVertical: TextAlignVertical.top,
                       textAlign: TextAlign.start,
-                      controller: helpCenterController.zoneCtrl,
+                      controller: deathDetailController.zoneCtrl,
                       keyboardType: TextInputType.multiline,
                       decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -177,10 +169,10 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                           labelText: "Zone",
                           alignLabelWithHint: true),
                       onSaved: (value) {
-                        helpCenterController.helpCenter.zone = value;
+                        deathDetailController.helpCenter.zone = value;
                       },
                       validator: (value) {
-                        return helpCenterController.validateZone(value!);
+                        return deathDetailController.validateZone(value!);
                       },
                     ),
                   ),
@@ -192,13 +184,13 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                         var form = formKey.currentState;
                         if(form!.validate()){
                           form.save();
-                          await helpCenterController.dbHelper!.insertHelpCenter(helpCenterController.helpCenter);
+                          await deathDetailController.dbHelper!.insertHelpCenter(deathDetailController.helpCenter);
                           form.reset();
-                          helpCenterController.nameCtrl.clear();
-                          helpCenterController.phoneCtrl.clear();
-                          helpCenterController.designationCtrl.clear();
-                          helpCenterController.cityCtrl.clear();
-                          helpCenterController.zoneCtrl.clear();
+                          deathDetailController.nameCtrl.clear();
+                          deathDetailController.phoneCtrl.clear();
+                          deathDetailController.designationCtrl.clear();
+                          deathDetailController.cityCtrl.clear();
+                          deathDetailController.zoneCtrl.clear();
                           // Get.to(()=>LoginPage());
                           print("success");
                         }else{
@@ -210,37 +202,13 @@ class _HelpCenterAddPageState extends State<HelpCenterAddPage> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        Get.to(() => AdminHelpCenter());
+                        Get.to(() => AdminDeathDetails());
                       },
                       child: const Text('View',style: TextStyle(fontSize: 20),)
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: GestureDetector(
-                  //     child: RichText(
-                  //       text: TextSpan(
-                  //           text: "Already have an Account? ",
-                  //           style: TextStyle(
-                  //               color: Colors.grey.shade700,
-                  //               fontSize: 13,
-                  //               fontWeight: FontWeight.bold),
-                  //           children: const [
-                  //             TextSpan(
-                  //                 text: "Login",
-                  //                 style: TextStyle(
-                  //                     color: Colors.red,
-                  //                     fontWeight: FontWeight.bold,
-                  //                     fontSize: 13))
-                  //           ]),
-                  //     ),
-                  //     onTap: () {
-                  //       Get.to(()=>LoginPage());
-                  //     },
-                  //   ),
-                  // )
                 ],
               ),
             ),

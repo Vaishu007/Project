@@ -2,7 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smit_project/admin/help_center%20add.dart';
+import 'package:smit_project/admin/home_page/admin_home.dart';
+import 'package:smit_project/admin/screens/help_center%20add.dart';
 import 'package:smit_project/gridWidget/gallery.dart';
 import 'package:smit_project/page/Login/login.dart';
 import 'package:smit_project/page/profile/profile_page.dart';
@@ -25,7 +26,7 @@ final List<String> imgList = [
 
 class HomePage extends StatefulWidget {
 
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -34,36 +35,34 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Widget> imageSliders = imgList
       .map((item) => Container(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  child: Stack(
-                    children: <Widget>[
-                      Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                      Positioned(
-                        bottom: 0.0,
-                        left: 0.0,
-                        right: 0.0,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color.fromARGB(200, 0, 0, 0),
-                                Color.fromARGB(0, 0, 0, 0)
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter,
-                            ),
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                        ),
-                      )
-                    ],
-                  )),
-            ),
-          ))
+        margin: const EdgeInsets.all(5.0),
+        child: ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+            child: Stack(
+              children: <Widget>[
+                Image.network(item, fit: BoxFit.cover, width: 1000.0),
+                Positioned(
+                  bottom: 0.0,
+                  left: 0.0,
+                  right: 0.0,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(200, 0, 0, 0),
+                          Color.fromARGB(0, 0, 0, 0)
+                        ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10.0, horizontal: 20.0),
+                  ),
+                )
+              ],
+            )),
+      ))
       .toList();
 Map arr= {
   'arrText':[
@@ -92,40 +91,40 @@ Map arr= {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
+          title: const Text('Home'),
           // in action widget we have PopupMenuButton
           actions: [
             PopupMenuButton<int>(
               itemBuilder: (context) => [
                 // PopupMenuItem 1
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 1,
                   // row with 2 children
                   child: Text("Profile"),
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 2,
                   // row with two children
                   child: Text("Admin"),
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 3,
                   // row with two children
                   child: Text("Log Out"),
                 ),
               ],
-              offset: Offset(0, 50),
+              offset: const Offset(0, 50),
               elevation: 2,
               // on selected we show the dialog box
               onSelected: (value) {
                 // if value 1 show dialog
                 if (value == 1) {
-                  Get.to(()=>ProfilePage());
+                  Get.to(()=>const ProfilePage());
                   // if value 2 show dialog
                 } else if (value == 3) {
                   logOut();
                 }else if(value == 2){
-                  Get.to(()=> HelpCenterAddPage());
+                  Get.to(()=> const AdminHome());
                 }
               },
             ),
@@ -135,81 +134,76 @@ Map arr= {
 
         body: SafeArea(
           top: true,
-          child: Container(
-              child: Column(
+          child: Column(
             children: [
-              Container(
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    autoPlay: true,
-                    aspectRatio: 2.0,
-                    enlargeCenterPage: false,
-                  ),
-                  items: imageSliders,
-                ),
-              ),
-              Container(
-                child: Container(
-                  height: MediaQuery.of(context).size.height / 2,
-                  child: GridView.count(
-                    padding: EdgeInsets.all(10),
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                   
-                    crossAxisCount: 3,
-                    children: List.generate(
-                      arr['arrText'].length,
-                      (index) => GestureDetector(
-                        onTap: () {
-                         switch(arr['arrText'][index]){
-                           case 'Pride of society':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => POfS(),));
-                             break;
-                           case 'Death note':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => DeathList(),));
-                             break;
-                           case 'Bio-data':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => Bio(),));
-                             break;
-                           case 'Help center':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => HelpCenter(),));
-                             break;
-                           case 'News':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(),));
-                             break;
-                           case 'Gallery':
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => Gallery(),));
-                             break;
-                         }
-                        },
-                        child: Card(elevation: 10,
-                          color: Color(0xFFFB6969),
-                          shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10) ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(arr['arrIcon'][index],size: 20,color: Colors.white,),
-                              ),
-                               Text(arr['arrText'][index],textAlign: TextAlign.center,style: TextStyle(color: Colors.white),)
-                            ],
-                          ),
+          CarouselSlider(
+            options: CarouselOptions(
+              autoPlay: true,
+              aspectRatio: 2.0,
+              enlargeCenterPage: false,
+            ),
+            items: imageSliders,
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+            child: GridView.count(
+              padding: const EdgeInsets.all(10),
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+
+              crossAxisCount: 3,
+              children: List.generate(
+                arr['arrText'].length,
+                (index) => GestureDetector(
+                  onTap: () {
+                   switch(arr['arrText'][index]){
+                     case 'Pride of society':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const POfS(),));
+                       break;
+                     case 'Death note':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const DeathList(),));
+                       break;
+                     case 'Bio-data':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const Bio(),));
+                       break;
+                     case 'Help center':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const HelpCenter(),));
+                       break;
+                     case 'News':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const NewsPage(),));
+                       break;
+                     case 'Gallery':
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const Gallery(),));
+                       break;
+                   }
+                  },
+                  child: Card(elevation: 10,
+                    color: const Color(0xFFFB6969),
+                    shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10) ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(arr['arrIcon'][index],size: 20,color: Colors.white,),
                         ),
-                      ),
+                         Text(arr['arrText'][index],textAlign: TextAlign.center,style: const TextStyle(color: Colors.white),)
+                      ],
                     ),
                   ),
                 ),
-              )
+              ),
+            ),
+          )
             ],
-          )),
+          ),
         ));
   }
 
   void logOut() async{
     final SharedPreferences shared = await SharedPreferences.getInstance();
     shared.setBool("is_log", false);
-    Get.offAll(()=>LoginPage());
+    Get.offAll(()=>const LoginPage());
   }
 }

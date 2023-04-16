@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Death_details.dart';
+import 'death_details/Death_details.dart';
 class DeathList extends StatefulWidget {
   const DeathList({Key? key}) : super(key: key);
 
