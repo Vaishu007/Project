@@ -800,7 +800,128 @@ class _BioState extends State<Bio> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  children: [Text("Birth Detail")],
+                  children: [Text("Birth Detail"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 2.3,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                  borderSide:
+                                  BorderSide(width: 1, color: Colors.red)),
+                              labelText: "Birth Date",
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 2.3,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                  borderSide:
+                                  BorderSide(width: 1, color: Colors.red)),
+                              labelText: "Birth Time",
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(width: 1, color: Colors.grey),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.red)),
+                        labelText: "Birth Place",
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide:
+                              BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Vatan",
+                          hintText: "Enter Vatan Name"),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide:
+                              BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Moshal",
+                          hintText: "Enter Moshal Name"),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide:
+                              BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Gotra",
+                          hintText: "Enter Gotra Name"),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(width: 1, color: Colors.grey),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.red)),
+                        labelText: "Mother Gotra",
+                      ),
+                    ),
+                  ),
+        ]
                 ),
               ),
               const SizedBox(
@@ -811,7 +932,38 @@ class _BioState extends State<Bio> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  children: [Text("Family Detail")],
+                  children: [Text("Family Detail"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Father Name",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.grey),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide:
+                                BorderSide(width: 1, color: Colors.red)),
+                            labelText: "Mother Name",
+                            hintText: "Enter Mother Name"),
+                      ),
+                    ), ],
                 ),
               ),
               const SizedBox(
@@ -822,7 +974,82 @@ class _BioState extends State<Bio> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  children: [Text("Occupation Detail")],
+                  children: [Text("Occupation Detail"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Education",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Occupation",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Address",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Designation",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5),
+                            borderSide: BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                              borderSide: BorderSide(width: 1, color: Colors.red)),
+                          labelText: "Income",
+                        ),
+                      ),
+                    )],
                 ),
               ),
               const SizedBox(
@@ -833,7 +1060,36 @@ class _BioState extends State<Bio> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  children: [Text("Grah Detail")],
+                  children: [Text("Grah Detail"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Shani"),
+                          Switch(
+                            value: isShani,
+                            onChanged: (value) {
+                              setState(() {
+                                isShani = value;
+                              });
+                            },
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Text("Mangal"),
+                          Switch(
+                            value: isMangal,
+                            onChanged: (value) {
+                              setState(() {
+                                isMangal = value;
+                              });
+                            },
+                          )
+                        ],
+                      ),
+                    ),],
                 ),
               ),
             ],

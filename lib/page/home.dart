@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smit_project/admin/help_center%20add.dart';
 import 'package:smit_project/gridWidget/gallery.dart';
 import 'package:smit_project/page/Login/login.dart';
 import 'package:smit_project/page/profile/profile_page.dart';
@@ -9,7 +10,7 @@ import 'package:smit_project/page/profile/profile_page.dart';
 
 import '../gridWidget/biodata/Biodata_add.dart';
 import '../gridWidget/death_list.dart';
-import '../gridWidget/help_center.dart';
+import '../gridWidget/help_center/help_center.dart';
 import '../gridWidget/news.dart';
 import '../gridWidget/pos.dart';
 
@@ -102,9 +103,13 @@ Map arr= {
                   // row with 2 children
                   child: Text("Profile"),
                 ),
-                // PopupMenuItem 2
                 PopupMenuItem(
                   value: 2,
+                  // row with two children
+                  child: Text("Admin"),
+                ),
+                PopupMenuItem(
+                  value: 3,
                   // row with two children
                   child: Text("Log Out"),
                 ),
@@ -117,8 +122,10 @@ Map arr= {
                 if (value == 1) {
                   Get.to(()=>ProfilePage());
                   // if value 2 show dialog
-                } else if (value == 2) {
+                } else if (value == 3) {
                   logOut();
+                }else if(value == 2){
+                  Get.to(()=> HelpCenterAddPage());
                 }
               },
             ),
